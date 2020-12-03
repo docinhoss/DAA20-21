@@ -39,8 +39,11 @@ int main(){
   vector<vector<int>> adj(v);
   for(int i=0; i<e; i++){
     cin >> from >> to;
+    //Undirected graph
     adj[from-1].push_back(to-1);
     adj[to-1].push_back(from-1);
+    //Direct graph
+    //adj[from-1].push_back(to-1);
   }
   
   vector<int> p = bfs(0, adj);
