@@ -9,9 +9,6 @@
 #define RDUPLICATE(s) s.erase(unique(s.begin(), s.end()), s.end()) 
 
 #define MAX 26
-#define WHITE 0
-#define GREY 1
-#define BLACK 2
 
 using namespace std;
 
@@ -19,7 +16,6 @@ int v, e, index, k;
 int num[MAX], low[MAX];
 bool adjMatrix[MAX][MAX], inStack[MAX];
 stack<int> s;
-
 vector<int> CFC;
 
 void dfs(int node){
